@@ -35,6 +35,6 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding: 100px 0; /* add space top and bottom */
+  padding: 100px 0;
   color: white;
 }
