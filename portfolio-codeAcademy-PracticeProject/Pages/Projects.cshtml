@@ -1,0 +1,40 @@
+@page
+@using portfolio_codeAcademy_PracticeProject.Models;
+<!-- Projects.cshtml -->
+
+<!-- Add model directive below -->
+@model ProjectsModel
+@{
+    ViewData["Title"] = "Projects";
+}
+
+<div class="jumbotron jumbotron-fluid jumbotron-container text-white project-jumbotron">
+    <div class="container-fluid jumbotron-content">
+        <p class="text-center mb-4 jumbotron-header">Projects</p>
+    </div>
+</div>
+
+<div class="container">
+    @foreach(Project proj in Model.Projects){
+        if(@proj.Year > 2017){
+            <div class="project-container">
+                <h4 class="project-title general-header">
+                    @proj.Title
+                </h4>
+                <p class="project-year general-header">
+                    @proj.Year
+                </p>
+                <p class="project-description general-content">
+                    @proj.Description
+                </p>
+            </div>
+        }
+    }
+  
+    <br>
+    <h4 class="general-header">Portfolio</h4>
+    <p class="general-content">
+        @* <partial name="_Links" model="Projects" for="@Model.GithubUsername"/> *@
+    </p>
+    <br>
+</div>

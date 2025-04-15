@@ -1,0 +1,9 @@
+<!-- _Links.cshtml -->
+@model string
+<!-- usually we would have compare using ViewData["Title"] == "Home" but to access it as a just a string Model we passed the string model directive -->
+
+@if(Model == "Home"){
+    <a class="nav-link text-dark" href="./">LinkedIn</a>
+}else if(Model == "Projects"){
+    <a class="nav-link text-dark" href="./">Github</a>
+}
