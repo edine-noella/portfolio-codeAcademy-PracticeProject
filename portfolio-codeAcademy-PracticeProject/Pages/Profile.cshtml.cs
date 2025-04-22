@@ -1,11 +1,11 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Threading.Tasks;
 
 namespace portfolio_codeAcademy_PracticeProject.Pages
 {
     public class Profile : PageModel
     {
-        public string Greeting(string firstName) => "Dear," + firstName;
-       
+        public string Greeting(string firstName) => "Dear, " + firstName;
 
         public string FirstName { get; set; }
         public int Age { get; set; }
@@ -13,16 +13,16 @@ namespace portfolio_codeAcademy_PracticeProject.Pages
         public string City { get; set; }
         public string greetingMessage { get; set; }
 
-        public void OnGet()
+        public async Task OnGetAsync()
         {
-            // FirstName = "Edine"
+            await Task.CompletedTask;
+
             ViewData["FirstName"] = "Edine";
-            // Age = 19;
             ViewData["Age"] = 20;
-            // Gender = "female";
             ViewData["Gender"] = "Female";
             City = "Kigali";
-            greetingMessage = Greeting(FirstName);
+
+            greetingMessage = Greeting("Edine");
         }
     }
 }
