@@ -5,16 +5,32 @@
 }
 <h1 class="text-center">Your Profile</h1>
 <br>
-<div class="card mx-auto" style="width: 18rem;">
-    <img src="https://static-assets.codecademy.com/curriculum/asp/pizza.svg" class="card-img-top-center" alt="pizza icon" style="width: 50px; height: 50px;">
+
+<form method="post">
+    <div class="form-group">
+        <label for="FirstName">First Name</label>
+        <input type="text" id="FirstName" name="FirstName" class="form-control" value="@Model.FirstName" />
+    </div>
+
+    <div class="form-group">
+        <label for="City">City</label>
+        <input type="text" id="City" name="City" class="form-control" value="@Model.City" />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Update</button>
+</form>
+
+<hr>
+
+<div class="card mx-auto mt-4" style="width: 18rem;">
     <div class="card-body">
-        <h4 class="card-title text-center">Confirm your Details</h4>
+        <h4 class="card-title text-center">Confirmed Details</h4>
         <br>
-        <h5>@ViewData["FirsName"]</h5>
+        <h5>FirstName: @Model.FirstName</h5>
         <h5>Gender: @ViewData["Gender"]</h5>
         <h5>City: @Model.City</h5>
         <h5>Age: @ViewData["Age"]</h5>
         <br>
-        <a href="#" class="btn btn-primary">See More</a>
+        <a href="#" class="btn btn-secondary">See More</a>
     </div>
 </div>
