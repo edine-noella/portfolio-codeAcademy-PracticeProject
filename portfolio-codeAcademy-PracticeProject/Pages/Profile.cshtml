@@ -10,10 +10,10 @@
     <div class="card-body">
         <h4 class="card-title text-center">Confirm your Details</h4>
         <br>
-        <h5>@Model.greetingMessage</h5>
-        <h5>Gender: @Model.Gender</h5>
+        <h5>@ViewData["FirsName"]</h5>
+        <h5>Gender: @ViewData["Gender"]</h5>
         <h5>City: @Model.City</h5>
-        <h5>Age: @Model.Age</h5>
+        <h5>Age: @ViewData["Age"]</h5>
         <br>
         <a href="#" class="btn btn-primary">See More</a>
     </div>

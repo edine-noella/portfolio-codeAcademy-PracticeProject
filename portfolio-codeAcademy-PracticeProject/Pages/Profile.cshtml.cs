@@ -15,9 +15,12 @@ namespace portfolio_codeAcademy_PracticeProject.Pages
 
         public void OnGet()
         {
-            FirstName = "Edine";
-            Age = 19;
-            Gender = "female";
+            // FirstName = "Edine"
+            ViewData["FirstName"] = "Edine";
+            // Age = 19;
+            ViewData["Age"] = 20;
+            // Gender = "female";
+            ViewData["Gender"] = "Female";
             City = "Kigali";
             greetingMessage = Greeting(FirstName);
         }
