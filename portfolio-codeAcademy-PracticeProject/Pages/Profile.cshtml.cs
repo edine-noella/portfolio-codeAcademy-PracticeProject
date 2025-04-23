@@ -17,16 +17,25 @@ namespace portfolio_codeAcademy_PracticeProject.Pages
         public int Age { get; set; }
         public string Gender { get; set; }
         public string greetingMessage { get; set; }
+        public string testingRedirecting { get; set; }
 
-        public async Task OnGetAsync()
+        public async Task<IActionResult> OnGetAsync()
         {
             await Task.CompletedTask;
+            
+            // testingRedirecting = "brabrabra";
+            if (string.IsNullOrEmpty(testingRedirecting)) 
+            {
+                return NotFound();
+            }
 
             ViewData["FirstName"] = "Edine";
             ViewData["Age"] = 20;
             ViewData["Gender"] = "Female";
             City = "Kigali";
             greetingMessage = Greeting("Edine");
+
+            return Page();
         }
 
         public async Task OnPostAsync()
