@@ -26,7 +26,8 @@ namespace portfolio_codeAcademy_PracticeProject.Pages
             // testingRedirecting = "brabrabra";
             if (string.IsNullOrEmpty(testingRedirecting)) 
             {
-                return NotFound();
+                // return NotFound();
+                return RedirectToPage("/Error");
             }
 
             ViewData["FirstName"] = "Edine";
